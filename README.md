@@ -1,6 +1,7 @@
 # Javascript-And-React-Core-Concepts-2021
 
 Javascript Concepts:
+
 1)Scope 
 
 function Scope
@@ -60,10 +61,14 @@ callbacks,Promises and async-await
 React Concepts:
 
 1)Functional Components
+
 2)Class Based Components
+
 3)Props
+
 4)Events
   onClick,onBlur,onChange
+  
 5)Hooks
   useState,useEffect,useRef
 

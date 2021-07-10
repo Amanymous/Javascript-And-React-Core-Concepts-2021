@@ -87,38 +87,39 @@
 //     this.displayName = function() {
 //       return this.firstName + ' ' + this.lastName;
 //     };
-   
+
 //     return '10';
 //   }
-   
+
 //   var person = new Person('Carmen', 'Sayid');
 //   console.log(person);
-   
-   
+
+
 
 // Person {firstName: "Carmen", lastName: "Sayid", displayName: ƒ}
 
 // Constructor Example
- 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.displayName = function() {
-    return this.firstName + ' ' + this.lastName;
-  };
-}
- 
-function Car(make, model, owner) {
-  this.make = make;
-  this.model = model;
-  this.owner = owner;
-}
- 
-let Carmen = new Person('Carmen', 'Sayid');
-let Polly = new Person('Polly', 'Pipe');
- 
-var Jeep = new Car('Jeep', 'Compass Sport', Carmen);
-var Nissan = new Car('Nissan', '300ZX', Polly);
- 
-console.log(Jeep.owner.displayName());
-console.log(Nissan.owner.displayName());
+
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.displayName = function() {
+//     return this.firstName + ' ' + this.lastName;
+//   };
+// }
+
+// function Car(make, model, owner) {
+//   this.make = make;
+//   this.model = model;
+//   this.owner = owner;
+// }
+
+// let Carmen = new Person('Carmen', 'Sayid');
+// let Polly = new Person('Polly', 'Pipe');
+
+// var Jeep = new Car('Jeep', 'Compass Sport', Carmen);
+// var Nissan = new Car('Nissan', '300ZX', Polly);
+
+// console.log(Jeep.owner.displayName());
+// console.log(Nissan.owner.displayName());
+

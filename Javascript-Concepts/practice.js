@@ -1,13 +1,11 @@
-function outer(){
-    let outervar = 'from outside'
-    function inner(){
-        let innervar = 'from inside'
-        console.log('outervar:',outervar)
-        console.log('inner',innervar)
+function Identity(firstName,lastName,age){
+    this.firstName = firstName
+    this.lastName = lastName;
+    this.age = age;
+    this.fullName = function(){
+        return this.fullName + ' '+ this.lastName
     }
-    inner()
 }
-const inn = outer()
-outer()
-
-
+let identity = new Identity('alex','json',88)
+console.log(identity)
+console.log(identity.fullName())

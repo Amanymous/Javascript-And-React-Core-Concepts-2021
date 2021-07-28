@@ -6,9 +6,31 @@ import App from './App';
 
 Enzyme.configure({ adapter:new EnzymeAdapter() })
 
-test('renders h1 tag', () => {
+test('renders without error',()=>{
   const wrapper = shallow(<App/>)
-  
-  
-});
- 
+  const appComponent = wrapper.find("[data-test='component-app']")
+  expect(appComponent.length).toBe(1)
+})
+
+test('renders increment button',()=>{
+  const wrapper = shallow(<App/>)
+  const button = wrapper.find("[data-test='increment-button']")
+  expect(button.length).toBe(1)
+
+})
+
+test('renders counter display',()=>{
+  const wrapper = shallow(<App/>)
+  const counterDisplay = wrapper.find("[data-test='counter-display']")
+  expect(counterDisplay.length).toBe(1)
+})
+
+// test('counter starts at 0',()=>{
+//   const wrapper = shallow(<App/>)
+//   const counterStart = wrapper.find("['data-test='counter-start']")
+//   expect(counterStart.length).toBe(1)
+// })
+
+// test('clicking button increments counter display',()=>{
+
+// })

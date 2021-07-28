@@ -3,8 +3,9 @@ import './App.css';
 
 function App({title}) {
   return (
-    <div className="App">
-     <h1>{title}</h1>
+    <div data-test="component-app">
+     <h1 data-test="counter-display">Display the counter</h1>
+     <button data-test="increment-button">Increment counter</button>
     </div>
   );
 }

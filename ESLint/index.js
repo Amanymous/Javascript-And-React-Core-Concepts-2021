@@ -1,11 +1,11 @@
 import { foo } from "./test"
-// import React from "react"
+import React from "react"
 
-// class hello extends React.Component{
-//     render(){
-//         return <div>hi</div>
-//     }}
-// export default hello
+class hello extends React.Component{
+    render(){
+        return <div>hi</div>
+    }}
+export default hello
 var age = 22
 function hi() {
     return `${foo} and  ${age}`

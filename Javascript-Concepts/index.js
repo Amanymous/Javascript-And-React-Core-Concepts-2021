@@ -103,3 +103,31 @@
 
 // }
 // addAll()
+
+//bad practice
+
+function addUserService(db,user){
+  if(!db) {
+    if(!db.isConnected()){
+      if(!user){
+        return db.insert("user",user)
+      } else{
+        throw new Error("No user")
+      }
+    }
+     else{
+        throw new Error("No database connection")
+      }
+  } else{
+    throw new Error("No database")
+  }
+}
+
+//good practice
+function addUserService(db,user){
+  if(!db) throw new Error("No database")
+  if(!db.isConnected()) throw new Error("No database connection")
+  if(!user) throw new Error("No user")
+  return db.insert("user",user)
+}
+

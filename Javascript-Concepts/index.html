@@ -73,5 +73,24 @@
   </div>
  </main>
 </body>
-<script src="./index.js" type="text/javascript"></script>
+<script src="./index.js" type="text/javascript">
+  (()=>{
+    //use this func becoz varibles couldn't get leak out only for plain js
+
+    console.log('js stack') 
+    const stackArray = [1,2,33]
+ 
+    const renderStack = ()=>{
+        const stackElement = document.querySelector('.stack')
+        stackArray.map((item)=>{
+            const stackItemElement = document.createElement('DIV')
+            stackItemElement.classList.add("stack_item")
+            stackItemElement.textContent = item
+            stackElement.append(stackItemElement)
+        })
+
+    }
+    renderStack()
+})()
+  </script>
 </html>

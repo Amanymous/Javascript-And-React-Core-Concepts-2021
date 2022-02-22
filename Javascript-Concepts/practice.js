@@ -1,3 +1,44 @@
+Need an easy way to compare two arrays, two objects, two data structures etc?
+
+Use JSON.stringify() before comparing.
+
+Note: this will only work when the two data structures have the same order.
+let a = [
+    ['angular',1],
+    ['react',2],
+    ['vue',1],
+    ]
+let b = [
+    ['angular',1],
+    ['react',2],
+    ['vue',1],
+    ]
+console.log(a == b)
+console.log(JSON.stringify(a) == JSON.stringify(a))
+
+let arr = [1, 2, 3, 4];
+
+// Get the sum of elements
+arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+// => 10
+
+// Classify the numbers by whether they are odd or not
+arr.reduce(
+  (accumulator, currentValue) => {
+    if (currentValue % 2 === 0) {
+      accumulator.even.push(currentValue);
+    } else {
+      accumulator.odd.push(currentValue);
+    }
+
+    return accumulator;
+  },
+  { even: [], odd: [] }
+);
+// => { even: [2, 4], odd: [1, 3] }
+
+
+
 function Identity(firstName,lastName,age){
     this.firstName = firstName
     this.lastName = lastName;
